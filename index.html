@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradition Look | Haute Couture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rouge-royal: #8B0000;
+            --blanc-luxe: #FFFFFF;
+            --or: #D4AF37;
+            --noir: #121212;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--blanc-luxe); color: var(--noir); line-height: 1.6; }
+
+        /* Animation d'entrée */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67) all; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Header */
+        header { padding: 25px 5%; display: flex; justify-content: center; background: white; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Cinzel', serif; font-size: 2rem; letter-spacing: 6px; color: var(--rouge-royal); font-weight: 700; }
+
+        /* Hero */
+        .hero { 
+            height: 80vh; 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('caftan-velours.jpg') center/cover; 
+            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+        }
+        .hero-text h1 { font-family: 'Cinzel', serif; font-size: 4rem; margin-bottom: 10px; border-bottom: 2px solid var(--or); display: inline-block; padding-bottom: 10px; }
+        .hero-text p { font-weight: 200; letter-spacing: 5px; text-transform: uppercase; }
+
+        /* Histoire */
+        .section-story { padding: 100px 15%; text-align: center; background: #fafafa; }
+        .section-story h2 { font-family: 'Cinzel', serif; color: var(--rouge-royal); font-size: 2.5rem; margin-bottom: 30px; }
+        .section-story p { font-size: 1.1rem; color: #444; font-style: italic; max-width: 900px; margin: 0 auto; }
+
+        /* Grille Produits */
+        .catalog { padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .product-card { position: relative; overflow: hidden; border: 1px solid #eee; transition: 0.5s; background: white; }
+        .product-card:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 550px; object-fit: cover; display: block; }
+        .product-overlay { padding: 25px; text-align: center; }
+        .product-overlay h3 { font-family: 'Cinzel', serif; margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* Bouton WhatsApp Luxe */
+        .btn-wa { 
+            display: inline-block; padding: 12px 30px; background: var(--rouge-royal); color: white; 
+            text-decoration: none; font-weight: 600; letter-spacing: 2px; transition: 0.3s; border: 1px solid var(--rouge-royal);
+        }
+        .btn-wa:hover { background: transparent; color: var(--rouge-royal); }
+
+        /* Formulaire */
+        .booking { padding: 100px 10%; background: var(--noir); color: white; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .booking-info { flex: 1; min-width: 300px; }
+        .booking-info h2 { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--or); margin-bottom: 20px; }
+        form { flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px; }
+        input, select { padding: 18px; background: transparent; border: 1px solid #444; color: white; font-family: 'Montserrat'; }
+        input:focus { border-color: var(--or); outline: none; }
+        .btn-submit { padding: 20px; background: var(--or); border: none; font-weight: bold; cursor: pointer; transition: 0.4s; }
+        .btn-submit:hover { background: white; color: var(--noir); }
+
+        footer { text-align: center; padding: 50px; background: white; font-size: 0.8rem; letter-spacing: 2px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TRADITION LOOK</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Tradition Look</h1>
+            <p>L'élégance d'hier, l'allure de demain</p>
+        </div>
+    </section>
+
+    <section class="section-story reveal">
+        <h2>L'Art du Caftan</h2>
+        <p>"Tradition Look est né de la passion pour l'artisanat marocain. Notre mission est de sublimer chaque femme en fusionnant le prestige du Caftan ancestral avec les codes du luxe contemporain. Chaque broderie raconte une histoire, chaque coupe célèbre une reine."</p>
+    </section>
+
+    <div class="catalog">
+        <div class="product-card reveal">
+            <img src="caftan-velours.jpg" alt="Caftan Velours">
+            <div class="product-overlay">
+                <h3>Le Majestueux Velours</h3>
+                <a href="https://wa.me/212647636451?text=Je+souhaite+commander+le+Caftan+Velours" class="btn-wa">S'INFORMER</a>
+            </div>
+        </div>
+        <div class="product-card reveal">
+            <img src="caftan-beige.jpg" alt="Caftan Beige">
+            <div class="product-overlay">
+                <h3>Satin de Soie Beige</h3>
+                <a href="https://wa.me/212647636451?text=Je+souhaite+commander+le+Caftan+Beige" class="btn-wa">S'INFORMER</a>
+            </div>
+        </div>
+        <div class="product-card reveal">
+            <img src="caftan-creme.jpg" alt="Caftan Creme">
+            <div class="product-overlay">
+                <h3>L'Éclat Crème</h3>
+                <a href="https://wa.me/212647636451?text=Je+souhaite+commander+le+Caftan+Creme" class="btn-wa">S'INFORMER</a>
+            </div>
+        </div>
+        <div class="product-card reveal">
+            <img src="caftan-marron.jpg" alt="Caftan Marron">
+            <div class="product-overlay">
+                <h3>Terre d'Orient</h3>
+                <a href="https://wa.me/212647636451?text=Je+souhaite+commander+le+Caftan+Marron" class="btn-wa">S'INFORMER</a>
+            </div>
+        </div>
+        <div class="product-card reveal">
+            <img src="caftan-lilas.jpg" alt="Caftan Lilas">
+            <div class="product-overlay">
+                <h3>Lilas Impérial</h3>
+                <a href="https://wa.me/212647636451?text=Je+souhaite+commander+le+Caftan+Lilas" class="btn-wa">S'INFORMER</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="booking reveal">
+        <div class="booking-info">
+            <h2>Privilège</h2>
+            <p>Réservez votre pièce unique ou prenez rendez-vous pour un essayage privé.</p>
+        </div>
+        <form id="waForm">
+            <input type="text" id="nom" placeholder="NOM COMPLET" required>
+            <input type="tel" id="tel" placeholder="NUMÉRO DE TÉLÉPHONE" required>
+            <select id="service">
+                <option value="Location">LOCATION</option>
+                <option value="Achat">ACHAT PRESTIGE</option>
+            </select>
+            <button type="submit" class="btn-submit">ENVOYER LA DEMANDE</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 TRADITION LOOK | LUXE & TRADITION | 06 47 63 64 51
+    </footer>
+
+    <script>
+        // Scroll Reveal Luxe
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+
+        // WhatsApp Form
+        document.getElementById('waForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nom = document.getElementById('nom').value;
+            const service = document.getElementById('service').value;
+            const msg = `Bonjour Tradition Look, je suis ${nom}. Je souhaite un service de ${service}.`;
+            window.location.href = `https://wa.me/212647636451?text=${encodeURIComponent(msg)}`;
+        });
+    </script>
+</body>
+</html>
